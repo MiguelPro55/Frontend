@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Menu principal de javascript</title>
+  </head>
+  <body>
+    <h1>Ejemplo de formulario</h1>
+    <form action="" method="post" id="form1" onsubmit="mensaje()">
+      Nombre:<input type="text" name="Nombre" id="nombre">
+      <input type="submit" value="Enviar">
+    </form>
+    <button id="boton1" onclick="agregar()">Mensaje</button>
+    <div id="lista">
+
+    </div>
+    <script>
+      function mensaje() {
+        var nameValue=document.getElementById('nombre').value;
+        alert("Hola "+nameValue);
+      }
+      function agregar() {
+        var lista= document.getElementById('lista');
+        var node = document.createElement("h2");
+        node.innerHTML="hola";
+        lista.appendChild(node);
+      }
+    </script>
+  </body>
+</html>
