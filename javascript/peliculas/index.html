@@ -12,7 +12,17 @@
         <input type="text" name="pelicula" id="pelicula">
         <button id="buscar" class="btn btn-primary">Buscar</button>
       </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-12" id="resultado"></div>
+
+        </div>
+      </div>
+
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -28,8 +38,33 @@
               s: $("#pelicula").val()
             },
             function(data,status){
-              console.log(data);
+              // console.log(data);
+              // var titulo= data.Search[0].Title;
+              // var year= data.Search[0].Year;
+              // var imdb= data.Search[0].imbdID;
+              // var poster= data.Search[0].Poster;
+              var titulo= "";
+              var year= "";
+              var imdb= "";
+              var poster= "";
+
+              for(num=0;num<data.Search.length;num++){
+                var titulo= data.Search[num].Title;
+                var year= data.Search[num].Year;
+                var imdb= data.Search[num].imdbID;
+                var poster= data.Search[num].Poster;
+
+              var resultado=
+              '<div class="card" style="width: 18rem;"> <img src="'+ poster +
+              '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+ titulo +
+              '</h5><p class="card-text"> Año '+ year +
+              '</p> <p class="card-text"> IMDB ' + imdb +
+              "</p><div></div>";
+
+              $("#resultado").append(resultado);
+              }
             }
+
           );
         });
       });
