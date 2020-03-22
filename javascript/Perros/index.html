@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Api perritos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-12">
+        <input type="text" name="perrito" id="perrito">
+        <button id="buscar" class="btn btn-primary">Buscar perrito</button>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-12" id="resultado"></div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+      jQuery(document).ready(function(){
+        $("#buscar").click(function(){
+          var s = $("#perrito").val();
+          $.get(
+                "https://dog.ceo/api/breed/"+s+"/images/random",
+                function(data,status){
+                // console.log(data);
+                var imagen = data.message;
+                var resultado=
+                '<div class="card" style="width: 18rem;"> <img src="'+imagen+
+                '" class="card-img-top" alt="...">';
+                $("#resultado").append(resultado);
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
