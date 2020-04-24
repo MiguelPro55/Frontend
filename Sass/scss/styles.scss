@@ -15,27 +15,26 @@ body{
   padding: 9px 5px;
   max-width: 1024px;
   margin: auto;
-}
 
-.menu li{
-  display: inline-block;
-  text-decoration: none;
-  /*padding: 10px; */
-  /* border: 1px solid #000; */
+  li{
+    display: inline-block;
+    text-decoration: none;
+    /*padding: 10px; */
+    /* border: 1px solid #000; */
+    a{
+      text-decoration: none;
+      padding: 10px;
+      color: $color1;
 
-}
-
-.menu li a{
-  text-decoration: none;
-  padding: 10px;
-  color: $color1;
-}
-.menu li a:hover{
-  text-decoration: none;
-  color: #000000;
-  background: $color2;
-  text-transform: uppercase;
-  border-bottom: 2px solid #000000;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #000000;
+      background: $color2;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000000;
+    }
+  }
 }
 
 h1 {
