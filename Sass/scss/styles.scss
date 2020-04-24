@@ -1,0 +1,46 @@
+$color1: #2b580c;
+$color2: #639a67;
+$colorBack: #d8ebb5;
+$colorMenu: #d9bf77 ;
+$fuente1: 'Acme', sans-serif;
+$fuente2: 'Dosis', sans-serif;
+
+body{
+  background: $colorBack;
+}
+
+.menu{
+  list-style: none;
+  background: $colorMenu;
+  padding: 9px 5px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.menu li{
+  display: inline-block;
+  text-decoration: none;
+  /*padding: 10px; */
+  /* border: 1px solid #000; */
+
+}
+
+.menu li a{
+  text-decoration: none;
+  padding: 10px;
+  color: $color1;
+}
+.menu li a:hover{
+  text-decoration: none;
+  color: #000000;
+  background: $color2;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+}
+
+h1 {
+  font-family: $fuente1;
+}
+p, h2{
+  font-family: $fuente2;
+}

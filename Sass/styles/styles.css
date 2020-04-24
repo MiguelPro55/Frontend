@@ -1,0 +1,33 @@
+body {
+  background: #d8ebb5; }
+
+.menu {
+  list-style: none;
+  background: #d9bf77;
+  padding: 9px 5px;
+  max-width: 1024px;
+  margin: auto; }
+
+.menu li {
+  display: inline-block;
+  text-decoration: none;
+  /*padding: 10px; */
+  /* border: 1px solid #000; */ }
+
+.menu li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #2b580c; }
+
+.menu li a:hover {
+  text-decoration: none;
+  color: #000000;
+  background: #639a67;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000; }
+
+h1 {
+  font-family: "Acme", sans-serif; }
+
+p, h2 {
+  font-family: "Dosis", sans-serif; }
